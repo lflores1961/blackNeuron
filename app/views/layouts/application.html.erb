@@ -6,9 +6,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= controller.controller_name %>">
+    <div id="banner">
+      <%= image_tag("logoBNR.png", size: "240x76", alt: 'Blac Neuron Research')  %>
+    </div>
+    <div id="columns">
+      <div id="side">
+
+      </div>
+      <div id="main">
+          <%= yield %>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+    <div class="debug">
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>

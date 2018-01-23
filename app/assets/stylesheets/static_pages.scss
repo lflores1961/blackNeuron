@@ -1,0 +1,57 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1 {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  p, li {
+    font-size: 16px;  
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+  
+  html {
+    background-color: #343a37;
+  }
+
+  body {
+    width: 80%;
+    margin: 0 auto;
+    color: #6c706e;
+    background-color: #2b2d2c;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 20px 0;  
+    color: #72b277;
+    text-shadow: 3px 3px 1px #38593a;
+  }
+
+  .contact-form {
+      display: block;
+      text-align: center;
+  }
+
+    form.button_to {
+        input {
+          width: 60%;
+          border-radius: 5px;
+          background-color: #6c706e;
+          color: #1d5137;
+        }
+    }
+
+  a {
+	color: #307a49;
+  }

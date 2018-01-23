@@ -1,24 +1,40 @@
-# README
+![Black Neuron Research](app/assets/images/logoBNR.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Black Neuron Research is a non for profit club for Ruby on Rails enthusiasts created to help young students learn Ruby on Rails. We are geographicaly based in Aguascalientes, México
 
-Things you may want to cover:
+* Ruby version: 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
 
-* Ruby version
+* Rails version: 5.1.4
 
 * System dependencies
+    * Pry (0.11.3 on Ruby 2.4.1)
+    * Byebug
+    * Guard
+    * Mini test reporters
+    * Puma app server
+    * heroku-cli/6.15.13 (linux-x64) node-v9.4.0
 
-* Configuration
+## Getting started
 
-* Database creation
+To get started with the app, clone the repo and then install the needed gems:
 
-* Database initialization
+    $ bundle install --without production
 
-* How to run the test suite
+Next, migrate the database:
 
-* Services (job queues, cache servers, search engines, etc.)
+    $ rails db:migrate
 
-* Deployment instructions
+Finally, run the test suite to verify that everything is working correctly:
 
-* ...
+    $ rails test
+
+If the test suite passes, you'll be ready to run the app in a local server:
+
+    $ rails server
+
+## License
+
+All source code is available jointly under the MIT License and the Beerware License. See
+[LICENSE.md](LICENSE.md) for details.
+
+There's also one addemdum to the license: Please help us be better developpers, comment and participate with suggestions, any feedback is welcome (not trolling please).
