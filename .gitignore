@@ -25,3 +25,5 @@
 # Ignore spring files.
 /spring/*.pid
 
+# Do not keep track of any secrets in the app
+/config/secrets.yml
