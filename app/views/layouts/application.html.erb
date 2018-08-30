@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BlackNeuron</title>
     <%= csrf_meta_tags %>
 
@@ -10,20 +13,28 @@
   </head>
 
   <body class="<%= controller.controller_name %>">
-      <a href='https://www.freepik.com/free-photo/business-adviser-analyzing-financial-figures-denoting-the-progress-in-the-work-of-the-company_1202220.htm'>Designed by Freepik</a>
-    <div id="banner">
-      <%= image_tag("logoBNR.png", size: "240x76", alt: 'Blac Neuron Research')  %>
-    </div>
-    <div id="columns">
-      <div id="side">
-
+    <% if controller.action_name == 'hogar' %>
+      <%= yield :home %>
+    <% else %>
+      <div class="topnav">
+        <div id="banner">
+          <%= image_tag("logoBNR.png", size: "150x50", alt: 'Black Neuron Research')  %>
+        </div>
+        <%= link_to 'Home', static_pages_home_path %>
+        <%= link_to 'News', static_pages_news_path %>
+        <%= link_to 'Contact', static_pages_contact_path %>
+        <%= link_to 'About', static_pages_about_path %>
       </div>
-      <div id="main">
-          <%= yield %>
-      </div>
-    </div>
+        <div id="columns">
+          <div id="side">
+          </div>
+          <div id="main">
+            <%= yield %>
+          </div>
+        </div>
+    <% end %>
     <footer>
-        <a href="https://www.freepik.com/free-photos-vectors/business">Business image created by Snowing - Freepik.com</a>
+        <small>BlackNeuron Research 2018</small>
     </footer>
     <div class="debug">
       <%= debug(params) if Rails.env.development? %>

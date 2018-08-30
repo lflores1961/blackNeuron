@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+# A marca is a node on a critical path network diagramm
 ActiveRecord::Schema.define(version: 20180413040209) do
   create_table "marcas", force: :cascade do |t|
     t.string "name"
